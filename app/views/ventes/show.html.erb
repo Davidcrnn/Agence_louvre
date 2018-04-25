@@ -1,0 +1,11 @@
+<h1>Show de l'annonce</h1>
+<ul><%= @vente.name %>
+    <%= @vente.description %>
+    <%= @vente.surface %>
+    <%= @vente.titre %>
+    <%= @vente.price %>
+</ul>
+<%= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
+<%= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>
+
+

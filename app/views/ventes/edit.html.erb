@@ -1,0 +1,8 @@
+<%= simple_form_for(@vente) do |f| %>
+<%= f.input :name, placeholder: "Nom" %>
+<%= f.input :titre, placeholder: "titre" %>
+<%= f.input :description, placeholder: "Description" %>
+<%= f.input :price, placeholder: "Price" %>
+<%= f.input :surface, placeholder: "Surface" %>
+<%= f.button :submit, :value => 'Editer', class: "btn btn-primary" %>
+<% end %>
