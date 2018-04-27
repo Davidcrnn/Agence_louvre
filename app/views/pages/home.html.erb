@@ -1,2 +1,61 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- <div class="banner-container">
+  <div class="banner-content">
+    <h1>Agence du Louvre</h1>
+    <h2>L'agence immobilière spécialiste au coeur de Paris</h2>
+  </div>
+  <div class="btn-annonces">
+    <p> <%= link_to 'Annonces des ventes', ventes_path, class: "btn btn-primary" %></p>
+    <h5><%= link_to 'Annonces des locations', ventes_path, class: "btn btn-primary" %></h5>
+  </div>
+</div>
+ -->
+
+<div class="banner">
+  <div class="container">
+    <h2>Agence du louvre</h2>
+    <h5>L'agence immobilière au coeur de Paris</h5>
+    <div class="btn-banner">
+    <%= link_to 'Annonces des locations', ventes_path, class: "btn btn-primary" %>
+    <%= link_to 'Annonces des ventes', ventes_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+    <div class="agence-container">
+      <div class="agence-titre-logo">
+        <h1>Agence du Louvre</h1>
+        <%= image_tag 'logo.png', crop: :fill %>
+      </div>
+
+
+      <div class="agence-horaires">
+        <table>
+          <tr>
+            <td>Horaires</td>
+          </tr>
+          <tr>
+            <td>Jours</td>
+            <td>Matin</td><br>
+            <td>Après-midi</td>
+          </tr>
+          <tr>
+            <td>Lundi</td>
+            <td>09h - 12</td>
+            <td>14h - 19h</td>
+          </tr>
+
+        </table>
+      </div>
+       <div class="agence-histoire">
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est </p>
+      </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+
+</div>
