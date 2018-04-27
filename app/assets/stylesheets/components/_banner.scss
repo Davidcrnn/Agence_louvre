@@ -1,0 +1,20 @@
+.banner {
+  background-image : linear-gradient(rgba(164, 182, 199, 0.4), rgba(164, 182, 199, 0.4)), image-url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 70px);
+}
+
+.btn-banner {
+  position: absolute;
+  a {
+    position: relative;
+    top: 240px;
+    left: 338px;
+    margin: 30px;
+  }
+}
+
+
+
+
