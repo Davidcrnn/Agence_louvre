@@ -1,10 +1,12 @@
 <h1>Show de l'annonce</h1>
+
 <ul>
   <li> <%= @vente.name %> </li>
   <li> <%= @vente.description %></li>
   <li> <%= @vente.surface %></li>
   <li>  <%= @vente.titre %></li>
   <li> <%= @vente.price %></li>
+  <li> <%= @vente.photo %></li>
 </ul>
 <%= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
 <%= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>
