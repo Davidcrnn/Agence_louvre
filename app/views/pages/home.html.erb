@@ -26,7 +26,7 @@
     <div class="agence-container">
       <div class="agence-titre-logo">
         <h1>Agence du Louvre</h1>
-        <%= image_tag 'logo.png', crop: :fill %>
+        <%= cl_image_tag("Agence.png", :height=>180, :quality=>100, :radius=>4, :width=>200, :crop=>"fit") %>
       </div>
 
 
