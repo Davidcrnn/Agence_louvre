@@ -1,0 +1,9 @@
+<h1>Show de l'annonce</h1>
+<ul>
+    <li> <%= @location.description %></li>
+    <li> <%= @location.surface %></li>
+    <li> <%= @location.titre %></li>
+    <li> <%= @location.price %></li>
+</ul>
+<%= link_to "Editer", edit_location_path(@location), class: "btn btn-primary" %>
+<%= link_to "Retour aux annonces", locations_path, class: "btn btn-primary" %>
