@@ -1,21 +1,13 @@
 <h1>Index des locations</h1>
 <div class="container-card">
-
-
-<ul> <% @locations.each do |location| %>
-  <li> <%= location.name %></li>
-  <li> <%= location.description %></li>
-  <li><%= location.surface %> </li>
-  <li> <%= location.titre %></li>
-  <li> <%= location.price %></li>
-  <%= link_to "Voir l'annonce", location_path(location), class: 'btn btn-primary'  %>
-  <%= link_to "Supprimez", vente_path(location), method: :delete, class: 'btn btn-primary'  %>
-   <% end %>
-</ul>
-
-
-<%= link_to "Créer une annonce", new_location_path, class: 'btn btn-danger' %>
-
-
-
+  <ul> <% @locations.each do |location| %>
+    <li> <%= location.description %></li>
+    <li><%= location.surface %> </li>
+    <li> <%= location.titre %></li>
+    <li> <%= location.price %></li>
+    <%= link_to "Voir l'annonce", location_path(location), class: 'btn btn-primary'  %>
+    <%= link_to "Supprimez", vente_path(location), method: :delete, class: 'btn btn-primary'  %>
+     <% end %>
+    <%= link_to "Créer une annonce", new_location_path, class: 'btn btn-danger' %>
+  </ul>
 </div>
