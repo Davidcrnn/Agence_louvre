@@ -3,7 +3,7 @@
 <div class="container-card">
   <ul> <% @ventes.each do |vente| %>
     <% if vente.photo.present? %>
-    <%= cl_image_tag @vente.photo, height: 300, width: 300, crop: :fill %>
+    <%= cl_image_tag vente.photo, height: 300, width: 300, crop: :fill %>
     <%else  %>
     <% end %>
     <li> <%= vente.name %></li>
