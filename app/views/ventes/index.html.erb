@@ -1,28 +1,21 @@
 <h1>Index des annonces de ventes</h1>
 
 <div class="container">
-   <% @ventes.each do |vente| %>
-  <div class="row">
-    <div class="col-xs-4">
+  <div class="card-annonces-ventes">
+    <% @ventes.each do |vente| %>
+    <div class="photo-card">
       <% if vente.photo.present? %>
-        <%= cl_image_tag vente.photo, height: 300, width: 300, crop: :fill %>
-      <%else  %>
+        <%= vente.photo %>
+      <% else %>
       <% end %>
-    </div>
-    <div class="col-xs-4">
-      <ul>
-        <li> <%= vente.name %></li>
-        <li> <%= vente.description %></li>
-        <li><%= vente.surface %> </li>
-        <li> <%= vente.titre %></li>
-        <li> <%= vente.price %></li>
-      </ul>
-    </div>
-    <div class="col-xs-4">
-      <%= link_to "Voir l'annonce", vente_path(vente), class: 'btn btn-primary'  %>
-      <%= link_to "Supprimez", vente_path(vente), method: :delete, class: 'btn btn-primary'  %>
-      <%= link_to "Créer une annonce", new_vente_path, class: 'btn btn-danger' %>
       <% end %>
+
+    </div>
+    <div class="photo-description">
+
+    </div>
+    <div class="photo-btn">
+
     </div>
   </div>
 </div>
