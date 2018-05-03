@@ -1,13 +1,61 @@
-.card-annonces-ventes {
-  height: 400px;
-  width: 100%;
-  border: 1px solid black;
-  box-shadow: 3px 1px 1px rgba(0,0,0,0.5);
-  display: flex;
+// .vente-container {
+//   display: flex;
+//   height: 900px;
+// }
+
+.container-index {
+  border: 2px solid red;
 }
 
-.photo-card {
-  height: 350px;
-  width: 40%;
-  border: 1px solid black;
+.card-vente {
+  border: 2px solid blue;
+  padding: 10px 10px;
+  height: 1500px;
+  display: flex;
+  align-items: center;
 }
+.content-vente {
+  height: 400px;
+  width: 100%;
+  padding: 15px 15px;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+// .annonce-simple {
+//   height: 500px;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   text-align: justify;
+// }
+
+// .photo-box {
+//   width: 29%;
+//   border: 1px solid rgba(0,0,0,0.5);
+//   box-shadow: 3px 1px 1px rgba(0,0,0,0.5);
+// }
+
+// .vente-description {
+//   width: 41%;
+//   border: 1px solid;
+//   padding: 20px 20px;
+//   height: 300px
+// }
+
+// .vente-link {
+//   width: 21%;
+//     border: 1px solid;
+//     height: 300px;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     justify-content: center;
+// }
+
+
+

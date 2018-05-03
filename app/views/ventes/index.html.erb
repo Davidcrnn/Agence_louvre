@@ -1,21 +1,32 @@
-<h1>Index des annonces de ventes</h1>
-
 <div class="container">
-  <div class="card-annonces-ventes">
-    <% @ventes.each do |vente| %>
-    <div class="photo-card">
-      <% if vente.photo.present? %>
-        <%= vente.photo %>
-      <% else %>
-      <% end %>
-      <% end %>
-
-    </div>
-    <div class="photo-description">
-
-    </div>
-    <div class="photo-btn">
-
-    </div>
-  </div>
+  <h1>Index des annonces de ventes</h1>
+    <%= link_to "Nouvelle annonce", new_vente_path, class: 'btn btn-success' %>
 </div>
+
+<div class="container-index">
+    <div class="card-vente">
+              <% @ventes.each do |vente| %>
+      <div class="content-vente">
+          <div class="photo-vente">
+                <% if vente.photo.present? %>
+                  <%= cl_image_tag vente.photo, height: 300, width: 300, crop: :fill %>
+          </div>
+          <div class="description-vente">
+            <ul>
+              <li> <%= vente.name %></li>
+              <li><%= vente.description %></li>
+              <li><%= vente.surface %></li>
+               <li><%= vente.price %></li>
+            </ul>
+          </div>
+          <div class="lien-vente">
+            <%= link_to "Voir l'annonce", vente_path(vente), class: 'btn btn-primary' %>
+            <%= link_to "Supprimez l'annonce", vente_path(vente), method: :delete, class: 'btn btn-danger' %>
+          </div>
+</div>
+                <% else %>
+                <% end %>
+          <% end %>
+      </div>
+    </div>
+
