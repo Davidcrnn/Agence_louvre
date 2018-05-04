@@ -9,7 +9,7 @@ gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
 gem 'cloudinary'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.0'
 gem 'mail_form'
 
 gem 'autoprefixer-rails'

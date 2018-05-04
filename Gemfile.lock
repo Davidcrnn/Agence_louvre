@@ -201,7 +201,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3)
-  carrierwave (~> 1.2)
+  carrierwave (~> 1.0)
   cloudinary
   figaro
   font-awesome-sass (~> 4.7)
