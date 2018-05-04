@@ -8,8 +8,8 @@
       <%= f.input :description, label: "Description", placeholder: "Description" %>
       <%= f.input :price, label: "Prix en €",placeholder: "Price" %>
       <%= f.input :surface,label: "Surface (m2)", placeholder: "Surface" %>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.input :attachements, multiple: true %>
+
       <%= f.button :submit, :value => 'Créer une vente', class: "btn btn-primary" %>
       <% end %>
     </div>

@@ -2,6 +2,8 @@ class VentesController < ApplicationController
 
   def index
     @ventes = Vente.all
+    @ventes = Vente.order('created_at DESC')
+
   end
 
   def show
@@ -37,7 +39,7 @@ class VentesController < ApplicationController
   private
 
   def vente_params
-    params.require(:vente).permit(:name, :titre, :description, :surface, :price, :photo, :localisation)
+    params.require(:vente).permit(:name, :titre, :description, :surface, :price, :photo, :localisation, {attachements: []})
   end
 
 end
