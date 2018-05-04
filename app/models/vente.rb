@@ -1,4 +1,5 @@
 class Vente < ApplicationRecord
-  mount_uploaders :attachements, AttachementsUploader
+  mount_uploaders :images, ImageUploader
+
 end
 
