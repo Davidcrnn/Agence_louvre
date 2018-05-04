@@ -1,22 +1,24 @@
 .agence-container {
   width: 100%;
-  margin: 10px auto;
-  padding: 10px 10px;
+  margin: 0px auto;
+  padding: 0px 30px;
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  border: 1px solid black;
 }
 
 .agence-titre-logo {
-  flex: 0 0 15%;
+  border: 1px solid red;
+
 }
 
 
 
 .agence-horaires {
-  flex: 0 0 20%;
+  border: 1px solid green;
 }
 
 .agence-histoire {
-  flex-grow: 1;
+  border: 1px solid blue;
+
 }
