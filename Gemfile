@@ -12,6 +12,8 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.0'
 gem 'mail_form'
 gem 'devise'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
