@@ -1,7 +1,7 @@
  <h1>Show de l'annonce</h1>
 
 <ul>
-  <% if @vente.images.present? %>
+  <% if @vente.photo.present? %>
   <li><%= cl_image_tag @vente.photo, height: 300, width: 400, crop: :fill %></li>
   <% else %>
   <% end %>
