@@ -39,7 +39,7 @@ class VentesController < ApplicationController
   private
 
   def vente_params
-    params.require(:vente).permit(:name, :titre, :description, :surface, :price, :localisation, {images: []})
+    params.require(:vente).permit(:name, :titre, :description, :surface, :price, :localisation, :photo)
   end
 
 end
