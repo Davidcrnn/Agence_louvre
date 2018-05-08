@@ -6,5 +6,6 @@ class Vente < ApplicationRecord
   validates :description, presence: true
   validates :surface, presence: true
   validates :price, presence: true
+  validates :localisation, presence: true
 end
 
