@@ -100,10 +100,6 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.4.0)
-    dotenv-rails (2.4.0)
-      dotenv (= 2.4.0)
-      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
@@ -289,12 +285,10 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   cloudinary
   devise
-  dotenv-rails
   figaro
   font-awesome-sass (~> 4.7)
   inherited_resources!
   jbuilder (~> 2.0)
-  jquery-rails (~> 4.1, >= 4.1.1)
   listen (~> 3.0.5)
   mail_form
   pg (~> 0.21)
