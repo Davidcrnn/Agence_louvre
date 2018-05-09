@@ -6,9 +6,10 @@
   <% else %>
   <% end %>
   <li> <%= @vente.name %> </li>
+  <li>  <%= @vente.titre %></li>
+  <li><%= @vente.localisation %></li>
   <li> <%= @vente.description %></li>
   <li> <%= @vente.surface %></li>
-  <li>  <%= @vente.titre %></li>
   <li> <%= @vente.price %></li>
 </ul>
 <%= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
