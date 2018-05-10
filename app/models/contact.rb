@@ -1,6 +1,7 @@
 class Contact < MailForm::Base
   attribute :name,      :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :telephone
   attribute :message
   attribute :nickname,  :captcha  => true
 
@@ -8,7 +9,7 @@ class Contact < MailForm::Base
 
   def headers
     {
-      :subject => "My Contact Form",
+      :subject => "Formulaire de contact",
       :to => "david.crenin@gmail.com",
       :from => %("#{name}" <#{email}>)
     }
