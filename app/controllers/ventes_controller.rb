@@ -15,7 +15,7 @@ class VentesController < ApplicationController
   end
 
   def create
-    @vente = Vente.new(vente_params)
+    @vente = Vente.create!(vente_params)
     @vente.save
     redirect_to vente_path(@vente)
   end
@@ -26,8 +26,11 @@ class VentesController < ApplicationController
 
   def update
     @vente = Vente.find(params[:id])
-    @vente.update(vente_params)
-    redirect_to vente_path(@vente)
+    if @vente.update(vente_params)
+      redirect_to vente_path(@vente)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -39,7 +42,7 @@ class VentesController < ApplicationController
   private
 
   def vente_params
-    params.require(:vente).permit(:name, :titre, :description, :surface, :price, :localisation, :photo)
+    params.require(:vente).permit(:name, :titre, :description, :surface, :price, :localisation, {images: []}, :photo)
   end
 
 end
