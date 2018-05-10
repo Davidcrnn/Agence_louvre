@@ -1,16 +1,25 @@
  <h1>Show de l'annonce</h1>
 
 <ul>
-  <% if @vente.photo.present? %>
-  <li><%= cl_image_tag @vente.photo, height: 300, width: 400, crop: :fill %></li>
-  <% else %>
+ <% @vente.images.each do |imagess| %>
+   <% if imagess.present? %>
+  <li><%= cl_image_tag imagess, height: 300, width: 400, crop: :fill  %></li>
+   <% else %>
+
+ <% end %>
+
   <% end %>
+
   <li> <%= @vente.name %> </li>
   <li>  <%= @vente.titre %></li>
   <li><%= @vente.localisation %></li>
   <li> <%= @vente.description %></li>
   <li> <%= @vente.surface %></li>
   <li> <%= @vente.price %></li>
+
+</ul>
+
+<ul>
 </ul>
 <%= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
 <%= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>

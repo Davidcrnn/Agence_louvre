@@ -10,6 +10,8 @@
       <%= f.input :surface,label: "Surface (m2)", placeholder: "Surface" %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
+      <%= f.file_field :images, multiple: true %>
+      <%= f.hidden_field :images_cache %>
       <%= f.button :submit, :value => 'Créer une vente', class: "btn btn-primary" %>
       <% end %>
   </div>
