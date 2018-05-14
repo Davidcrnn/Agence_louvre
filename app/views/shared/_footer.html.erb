@@ -1,6 +1,43 @@
-<div class="container-footer">
+<!-- <div class="container-footer">
   <h1>©Agence Du Louvre - 2018</h1>
   <%= link_to "Se connecter", user_session_path  %>
-  <%= link_to "Se déconnecter", destroy_user_session_path %>
-  <%= link_to "Dashbord", admin_root_path  %>
+</div> -->
+
+<div class="container-footer">
+  <div class="services-footer">
+    <h1>Nos services : </h1>
+
+      <p><%= link_to "Vente", ventes_path  %></p>
+      <p><%= link_to "Location", locations_path  %></p>
+      <p><%= link_to "Location Saisonnière", new_contact_path  %></p>
+      <p><%= link_to "Estimation", new_contact_path  %></p>
+
+  </div>
+
+  <div class="presentation-agence-footer">
+    <h1>Agence du Louvre</h1>
+               <p><i class="far fa-compass"></i> 52 rue de l'arbre Sec</p>
+          <p><i class="far fa-compass"></i> 75001 - Paris</p>
+          <p><i class="far fa-address-book"></i> 01-40-40-40</p>
+          <p><i class="far fa-envelope"></i> <a href="mailto:ag@gmail.com">ag@gmail.com</a> </p>
+
+
+
+  </div>
+
+  <div class="link-footer">
+    <h1>  </h1>
+    <ul>
+      <li><%= link_to "Contact", new_contact_path  %></li>
+      <li><%= link_to "Mentions légales", '/'  %></li>
+      <li><%= link_to "Admin", user_session_path  %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "Se déconnecter", destroy_user_session_path %></li>
+      <li><%= link_to "Dashbord", admin_root_path  %></li>
+      <% else %>
+      <% end %>
+    </ul>
+
+
+  </div>
 </div>

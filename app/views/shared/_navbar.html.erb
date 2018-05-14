@@ -1,8 +1,15 @@
 <div class="navbar-container">
-  <h4><%= link_to image_tag("logo.png", alt: "logo"), '/'%></h4>
-  <h4><%= link_to "Accueil", '/'  %></h4>
-  <h4><%= link_to "Annonces Ventes", ventes_path  %></h4>
-  <h4><%= link_to "Estimation", new_contact_path  %></h4>
-  <h4><%= link_to "Annonces Location", locations_path  %></h4>
-  <h4><%= link_to "Contact", new_contact_path  %></h4>
+
+  <div class="logo-agence">
+    <h1><%= link_to "Agence du Louvre", '/'%></h1>
+  </div>
+
+  <div class="link-navbar">
+    <h4><%= link_to "Accueil", '/', class: "accueil"  %></h4>
+    <h4><%= link_to "Ventes", ventes_path  %></h4>
+    <h4><%= link_to "Locations", locations_path  %></h4>
+    <h4><%= link_to "Estimation", new_contact_path  %></h4>
+    <h4><%= link_to "Contact", new_contact_path  %></h4>
+  </div>
 </div>
+

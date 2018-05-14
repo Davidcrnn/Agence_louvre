@@ -4,21 +4,37 @@
   padding: 0px 30px;
   display: flex;
   justify-content: space-around;
-  border: 1px solid black;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+
 }
 
 .agence-titre-logo {
-  border: 1px solid red;
-
+      padding: 20px 20px;
+  width: 20%;
+  h1 {
+    font-family: 'Tangerine', cursive;
+    margin: 0;
+    font-size: 60px;
+    } ul {
+    list-style-type: none;
+  } a {
+    color: black;
+  }
 }
+
 
 
 
 .agence-horaires {
-  border: 1px solid green;
+  padding: 20px 20px;
+  width: 20%;
 }
 
 .agence-histoire {
-  border: 1px solid blue;
+    padding: 20px 20px;
+  width: 40%;
+  text-align: justify;
+  line-height: 1.5;
 
 }
