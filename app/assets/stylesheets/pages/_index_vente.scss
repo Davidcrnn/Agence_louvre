@@ -1,6 +1,7 @@
 
 .container-index {
-  background-color: rgba(220,220,220,0.2)
+  background-color: rgba(220,220,220,0.2);
+  height: calc(100vh - 70px);
 }
 
 .card-vente {
@@ -21,10 +22,9 @@
   img {
   padding: 20px 20px;
   margin: 10px 20px;
-   border: 1px solid black;
-  border-radius: 20px;
+  border-radius: 3px;
   background-color: white;
-  box-shadow: 3px 3px 3px gray;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
   background-size: cover;
   background-position: center;
 }
@@ -32,41 +32,52 @@
 
 .description-vente {
   flex: 2 1 0;
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 3px;
   background-color: white;
   margin: 10px 20px;
   padding: 20px 20px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px gray;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
 
 }
 
-.lien-vente {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
+.info-titre h3 {
+    font-size: 24px;
 
-  justify-content: center;
-  border: 1px solid black;
-  margin: 10px 20px;
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px gray;
-  background-color: white;
-  a {
-    margin-bottom: 40px
+    color: rgb(101, 102, 101);;
   }
-}
 
-.description{
+
+.description p {
   text-align: justify;
   word-wrap: break-word;
-  overflow: auto;
+text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 50ch;
 
-  max-height: 208px;
 }
 .row {
     margin-right: 0px;
     margin-left: 0px;
+}
+.lien-vente {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 30px 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.25);
+  background-color: white;
+  a {
+    border-radius: 3px;
+    padding: 20px 30px;
+    color: White;
+    background-color: rgba(0, 0, 0, 0.34);
+  }
 }

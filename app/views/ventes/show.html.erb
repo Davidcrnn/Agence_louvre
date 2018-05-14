@@ -1,9 +1,9 @@
  <h1>Show de l'annonce</h1>
 
 <ul>
- <% @vente.images.each do |imagess| %>
+ <% @vente.images.each do |imagess|%>
    <% if imagess.present? %>
-  <li><%= cl_image_tag imagess, height: 300, width: 400, crop: :fill  %></li>
+  <li><%= cl_image_tag imagess.url, height: 300, width: 400, crop: :fill  %></li>
    <% else %>
 
  <% end %>
