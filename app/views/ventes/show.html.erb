@@ -2,11 +2,11 @@
 
 <ul>
  <% @vente.images.each do |imagess|%>
-   <% if imagess.present? %>
+   <%# if imagess.present? %>
   <li><%= cl_image_tag imagess.url, height: 300, width: 400, crop: :fill  %></li>
-   <% else %>
+   <%# else %>
 
- <% end %>
+ <%# end %>
 
   <% end %>
 
