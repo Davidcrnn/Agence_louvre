@@ -56,10 +56,12 @@ Nous sommes à votre disposition concernant votre demande, contactez-nous XXX
 
 <div class="container-top-annonces">
   <div class="row ">
-    <div class="col-xs-4">Première photo</div>
-    <div class="col-xs-4">Deuxieme photo</div>
-    <div class="col-xs-4">Troisième photo</div>
-
-
+  <% @ventes.each do |vente| %>
+  <% if vente.top === true %>
+    <div class="col-xs-4">
+  <%= cl_image_tag vente.photo, height: 332, width: 400, crop: :fill %>
   </div>
+  <% else %>
+  <% end %>
+  <% end %>
 </div>
