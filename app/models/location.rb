@@ -1,3 +1,4 @@
 class Location < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
+  attr_accessor :images
+  mount_uploaders :images, ImagesUploader
 end
