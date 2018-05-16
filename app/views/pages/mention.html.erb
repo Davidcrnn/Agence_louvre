@@ -1,3 +1,25 @@
 <div class="container-mentions">
   <h1>Mentions légales</h1>
+
+
+  <div class="flipcard h">
+    <% @ventes.each do |vente| %>
+    <%  if vente.top == true %>
+    <div class="front">
+      <%= cl_image_tag vente.photo, height: 332, width: 400, crop: :fill %>
+
+    </div>
+    <div class="back">
+      <h2><%= vente.titre %></h2>
+      <h2><%= vente.price %></h2>
+      <h2><%= vente.surface %></h2>
+
+
+      <%= link_to "Voir l'annonce", ventes_path  %>
+    </div>
+    <% else %>
+    <% end %>
+    <% end %>
 </div>
+</div>
+

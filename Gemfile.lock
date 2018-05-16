@@ -289,7 +289,7 @@ DEPENDENCIES
   activeadmin!
   autoprefixer-rails
   bootstrap-sass (~> 3.3)
-  carrierwave (~> 1.0)
+  carrierwave
   cloudinary
   devise
   figaro

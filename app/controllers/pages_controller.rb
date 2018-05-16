@@ -4,5 +4,6 @@ class PagesController < ApplicationController
   end
 
   def mention
+    @ventes =Vente.all
   end
 end
