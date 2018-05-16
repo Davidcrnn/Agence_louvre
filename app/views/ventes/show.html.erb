@@ -1,14 +1,14 @@
  <h1>Show de l'annonce</h1>
 
 <ul>
- <% @vente.images.each do |imagess|%>
-   <%# if imagess.present? %>
-  <li><%= cl_image_tag imagess.url, height: 300, width: 400, crop: :fill  %></li>
-   <%# else %>
+ <%# @vente.images.each do |imagess|%>
+   <% if @vente.images.present? %>
+  <li><%= cl_image_tag @vente.images[0], height: 300, width: 400, crop: :fill  %></li>
+   <% else %>
 
- <%# end %>
+ <% end %>
 
-  <% end %>
+  <%# end %>
 
   <li> <%= @vente.name %> </li>
   <li>  <%= @vente.titre %></li>
