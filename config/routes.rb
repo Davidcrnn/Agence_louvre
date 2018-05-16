@@ -9,5 +9,7 @@ end
   resources :ventes
   resources :locations
   resources :contacts, only: [:new, :create]
+
+  get '/mentions' => 'pages#mention'
 end
 
