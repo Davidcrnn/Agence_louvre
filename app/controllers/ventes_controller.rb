@@ -43,6 +43,12 @@ class VentesController < ApplicationController
 
   def vente_params
     params.require(:vente).permit(:name, :titre, :description, :surface, :top, :price, :localisation, {pictures: []})
+    params[:vente][:pictures].each do |image|
+    Cloudinary::Uploader.upload(image)
   end
+end
+
+
+
 
 end
