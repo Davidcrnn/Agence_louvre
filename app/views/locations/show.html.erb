@@ -1,7 +1,7 @@
 <h1>Show de l'annonce</h1>
 <ul>
   <% @location.images.each do |r| %>
-  <%= r.images %>
+  <%= cl_image_tag(r.url) %>
   <% end %>
     <li> <%= @location.description %></li>
     <li> <%= @location.surface %></li>

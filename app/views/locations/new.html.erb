@@ -10,9 +10,9 @@
       <%= f.input :description, label: "Description", placeholder: "Description" %>
       <%= f.input :price, label: "Prix en €",placeholder: "Price" %>
       <%= f.input :surface,label: "Surface (m2)", placeholder: "Surface" %>
-      <%=# f.input :photo %>
-      <%=# f.input :photo_cache, as: :hidden %>
-      <%=# f.label :images %>
+      <%#= f.input :photo %>
+      <%#= f.input :photo_cache, as: :hidden %>
+      <%#= f.label :images %>
       <%= f.file_field :images, multiple: true %>
       <%= f.hidden_field :images_cache %>
       <%= f.button :submit, :value => 'Créer une vente', class: "btn btn-primary" %>
