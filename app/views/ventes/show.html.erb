@@ -2,13 +2,7 @@
 
 <ul>
  <% @vente.pictures.each do |r|%>
-
-
-  <%= cl_image_tag(r.url) %>
-
-
-
-
+  <li><%= cl_image_tag(r.url) %></li>
   <% end %>
 
   <li>  <%= @vente.titre %></li>

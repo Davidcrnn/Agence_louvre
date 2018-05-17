@@ -1,8 +1,6 @@
 class Vente < ApplicationRecord
+mount_uploaders :pictures, PicturesUploader
 
-  attr_accessor :pictures
-  mount_uploaders :pictures, PicturesUploader
-  validates_presence_of :pictures
 
   belongs_to :user, optional: true
   validates :titre, presence: true
