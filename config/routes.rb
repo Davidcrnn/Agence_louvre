@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'images/destroy'
+
   ActiveAdmin.routes(self)
   devise_for :users
   root to: 'pages#home'
@@ -9,6 +11,7 @@ end
   resources :ventes
   resources :locations
   resources :contacts, only: [:new, :create]
+  resources :images, only: [:destroy]
 
   get '/mentions' => 'pages#mention'
 end

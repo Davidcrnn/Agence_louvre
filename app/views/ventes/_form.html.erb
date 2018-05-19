@@ -1,0 +1,43 @@
+<%= simple_form_for(@vente, :html => { multipart: true }) do |f| %>
+  <% if @vente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vente.errors.count, "error") %> prohibited this vente from being saved:</h2>
+
+      <ul>
+      <% @vente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="field">
+    <%= f.input :titre %>
+    <%= f.input :description %>
+    <%= f.input :surface %>
+    <%= f.input :price %>
+    <%= f.input :top, as: :select %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
+
+  <%= f.fields_for :image do |ff| %>
+    <div class="field">
+      <%= ff.label :image %><br>
+      <%= ff.file_field :image, multiple: true, name: "images[]" %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<% if @vente.id %>
+  <% @vente.images.each do |image| %>
+    <%= image_tag image.image_url(:ventes_image) %><br>
+    <%= link_to "Delete", image_path(image), :method => :delete %><br>
+  <% end %>
+<% end %>
+
+  </div>

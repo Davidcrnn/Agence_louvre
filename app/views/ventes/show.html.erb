@@ -1,21 +1,37 @@
- <h1>Show de l'annonce</h1>
+<!--  <h1>Show de l'annonce</h1>
 
 <ul>
- <% @vente.pictures.each do |r|%>
-  <li><%= cl_image_tag(r.url) %></li>
+ <%# @vente.pictures.each do |r|%>
+  <li><%#= cl_image_tag(r.url) %></li>
+  <%# end %>
+
+  <li>  <%#= @vente.titre %></li>
+  <li><%#= @vente.localisation %></li>
+  <li> <%#= @vente.description %></li>
+  <li> <%#= @vente.surface %></li>
+  <li> <%#= @vente.price %></li>
+
+</ul>
+
+<ul>
+</ul>
+<%#= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
+<%#= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>
+ -->
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author's name:</strong>
+  <%= @vente.titre %>
+</p>
+
+<p>
+  <strong>Images:</strong><br>
+  <% @vente.images.each do |image| %>
+    <%= image_tag image.image_url(:ventes_image) %>
   <% end %>
+</p>
 
-  <li>  <%= @vente.titre %></li>
-  <li><%= @vente.localisation %></li>
-  <li> <%= @vente.description %></li>
-  <li> <%= @vente.surface %></li>
-  <li> <%= @vente.price %></li>
-
-</ul>
-
-<ul>
-</ul>
-<%= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
-<%= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>
-
-
+<%= link_to 'Edit', edit_vente_path(@vente) %> |
+<%= link_to 'Back', ventes_path %>

@@ -12,12 +12,28 @@ class VentesController < ApplicationController
 
   def new
     @vente = Vente.new
+    @image = @vente.images.build
   end
 
   def create
     @vente = Vente.create!(vente_params)
-    @vente.save!
-    redirect_to vente_path(@vente)
+     @vente = Vente.new(vente_params)
+
+  respond_to do |format|
+    if @vente.save
+      if params[:images]
+        params[:images].each do |image|
+          @vente.images.create(image: image)
+        end
+      end
+
+      format.html { redirect_to @vente, notice: 'vente was successfully created.' }
+      format.json { render action: 'show', status: :created, location: @vente }
+    else
+      format.html { render action: 'new' }
+      format.json { render json: @vente.errors, status: :unprocessable_entity }
+    end
+  end
   end
 
   def edit
@@ -25,11 +41,14 @@ class VentesController < ApplicationController
   end
 
   def update
-    @vente = Vente.find(params[:id])
-    if @vente.update(vente_params)
-      redirect_to vente_path(@vente)
-    else
-      render :edit
+    respond_to do |format|
+      if @vente.update(vente_params)
+        format.html { redirect_to @vente, notice: 'vente was successfully updated.' }
+        format.json { render :show, status: :ok, location: @vente }
+      else
+        format.html { render :edit }
+        format.json { render json: @vente.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -42,7 +61,7 @@ class VentesController < ApplicationController
   private
 
   def vente_params
-    params.require(:vente).permit(:name, :titre, :description, :surface, :top, :price, :localisation, {pictures: []})
+    params.require(:vente).permit(:name, :titre, :description, :photo, :surface, :top, :price, :localisation, images_attributes: [:image, :vente_id])
   end
 
 
