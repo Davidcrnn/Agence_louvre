@@ -1,8 +1,12 @@
 <div class="container">
-  <h1>Index des annonces de ventes</h1>
-    <%= link_to "Nouvelle annonce", new_vente_path, class: 'btn btn-success' %>
 
-</div>
+  <% if user_signed_in? %>
+    <h1>Index des annonces de ventes</h1>
+      <%= link_to "Nouvelle annonce", new_vente_path, class: 'btn btn-success' %>
+
+
+  <% end %>
+    </div>
 
 <div class="container-index">
   <% @ventes.each do |vente| %>
