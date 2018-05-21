@@ -1,3 +1,4 @@
+
 <%= simple_form_for(@vente, :html => { multipart: true }) do |f| %>
   <% if @vente.errors.any? %>
     <div id="error_explanation">
@@ -10,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="container">
+  <div class="container form-container">
   <div class="field">
     <%= f.input :titre %>
     <%= f.input :description %>

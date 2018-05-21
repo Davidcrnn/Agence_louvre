@@ -62,9 +62,8 @@ Nous sommes à votre disposition concernant votre demande, contactez-nous XXX
   <% @ventes.each do |vente| %>
   <% if vente.top === true %>
     <div class="col-xs-4 photo-top-index flipcard h">
-      <div class="front">
-      <%= cl_image_tag vente.photo, height: 250, width: 300, crop: :fill %>
-
+      <div class="front description-top" style="background-image: url('<%= cl_image_path vente.photo, height: 250, width: 300, crop: :fill %>')">
+      <p>Voir en détail</p>
     </div>
     <div class="back">
       <p><%= vente.titre %></p>

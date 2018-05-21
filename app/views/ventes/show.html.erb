@@ -18,6 +18,7 @@
 <%#= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
 <%#= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>
  -->
+<div class="container-show">
 
 <p id="notice"><%= notice %></p>
 
@@ -29,9 +30,10 @@
 <p>
   <strong>Images:</strong><br>
   <% @vente.images.each do |image| %>
-    <%= image_tag image.image_url(:ventes_image) %>
+    <%= cl_image_tag image.image_url(:ventes_image) %>
   <% end %>
 </p>
 
 <%= link_to 'Edit', edit_vente_path(@vente) %> |
 <%= link_to 'Back', ventes_path %>
+</div>
