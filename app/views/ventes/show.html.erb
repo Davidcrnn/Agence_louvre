@@ -1,39 +1,102 @@
-<!--  <h1>Show de l'annonce</h1>
+    <div class="wrapper">
+      <div class="main-description">
+        <h1><%= @vente.titre %></h1>
+      </div>
+      <% if @vente.images.present? %>
 
-<ul>
- <%# @vente.pictures.each do |r|%>
-  <li><%#= cl_image_tag(r.url) %></li>
-  <%# end %>
 
-  <li>  <%#= @vente.titre %></li>
-  <li><%#= @vente.localisation %></li>
-  <li> <%#= @vente.description %></li>
-  <li> <%#= @vente.surface %></li>
-  <li> <%#= @vente.price %></li>
+    <div class="rslides_container">
+      <ul class="rslides" id="slider2">
 
-</ul>
+        <li><img src="<%= cl_image_path @vente.images[0].image_url(:ventes_image)%>" alt=""></li>
+        <li><img src="<%= cl_image_path @vente.images[1].image_url(:ventes_image)%>" alt=""></li>
+        <% if @vente.images[2].present? %>
+        <li><img src="<%= cl_image_path @vente.images[2].image_url(:ventes_image)%>" alt=""></li>
+        <% end %>
+        <% if @vente.images[3].present? %>
+         <li><img src="<%= cl_image_path @vente.images[3].image_url(:ventes_image) if @vente.images[3].present?%>" alt=""></li>
+         <% end %>
+         <% if @vente.images[4].present? %>
+         <li><img src="<%= cl_image_path @vente.images[4].image_url(:ventes_image)%>" alt=""></li>
+         <% end %>
+         <% if @vente.images[5].present? %>
+         <li><img src="<%= cl_image_path @vente.images[5].image_url(:ventes_image)%>" alt=""></li>
+         <% end %>
+         <% if @vente.images[6].present? %>
+         <li><img src="<%= cl_image_path @vente.images[6].image_url(:ventes_image)%>" alt=""></li>
+         <% end %>
+         <% if @vente.images[7].present? %>
+         <li><img src="<%= cl_image_path @vente.images[7].image_url(:ventes_image)%>" alt=""></li>
+         <% end %>
+         <% if @vente.images[8].present? %>
+         <li><img src="<%= cl_image_path @vente.images[8].image_url(:ventes_image)%>" alt=""></li>
+         <% end %>
+         <% if @vente.images[9].present? %>
+         <li><img src="<%= cl_image_path @vente.images[9].image_url(:ventes_image)%>" alt=""></li>
+         <% end %>
+      </ul>
+    </div>
+ <% end %>
 
-<ul>
-</ul>
-<%#= link_to "Editer", edit_vente_path(@vente), class: "btn btn-primary" %>
-<%#= link_to "Retour aux annonces", ventes_path, class: "btn btn-primary" %>
- -->
-<div class="container-show">
+            <div class="description-show">
+              <div class="information-vente">
+                <ul>
+                 <li><h1><%= @vente.titre %></h1> </li>
+                 <li><%= @vente.localisation %></li>
+                  <li>Prix TTC: (honoraires inclus)<%= @vente.price %></li> <br>
+                 <li><%= @vente.description %></li> <br>
+                 <li>Surface (m2): <%= @vente.surface %></li>
+                </ul>
+              <div class="contact-vente">
+                <button type="button" class="contact-vente" data-toggle="modal" data-target="#exampleModal">Faire une visite</button>
+              </div>
+            </div>
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author's name:</strong>
-  <%= @vente.titre %>
-</p>
+              </div>
 
-<p>
-  <strong>Images:</strong><br>
-  <% @vente.images.each do |image| %>
-    <%= cl_image_tag image.image_url(:ventes_image) %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_vente_path(@vente) %> |
-<%= link_to 'Back', ventes_path %>
+            <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Vous souhaitez visiter ce bien</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+      <div class="modal-body">
+      <h1>Agence du Louvre</h1>
+          <p><i class="far fa-compass"></i> 52 rue de l'arbre Sec</p>
+          <p><i class="far fa-compass"></i> 75001 - Paris</p>
+          <p><i class="far fa-address-book"></i> 01-40-40-40</p>
+          <p><i class="far fa-envelope"></i> <a href="mailto:ag@gmail.com" style="color: black;">ag@gmail.com</a> </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Revenir à l'annonce</button>
+        <button type="button" class="btn btn-secondary contact-modal"> <%= link_to "Contactez nous par email", new_contact_path   %></button>
+      </div>
+    </div>
+  </div>
 </div>
+
+            <p><%= link_to "Retour aux annonces", ventes_path, class: "retour"  %></p>
+    </div>
+
+<script>
+
+$(function () {
+   $("#slider2").responsiveSlides({
+        auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "transparent-btns"
+      });
+
+    });
+</script>
+
+
+

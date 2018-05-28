@@ -12,15 +12,6 @@
     </div>
   </div>
 </div>
-  <!-- <div class="container">
-    <h2>Agence du louvre</h2>
-    <h5>L'agence immobilière au coeur de Paris</h5>
-    <div class="btn-banner">
-    </div>
-  </div> -->
-
-
-
 
     <div class="agence-container">
       <div class="agence-titre-logo">
@@ -63,8 +54,8 @@ Nous sommes à votre disposition concernant votre demande, contactez-nous XXX
   <% if vente.top === true %>
     <div class="col-xs-4 photo-top-index flipcard h">
       <div class="front description-top" style="background-image: url('<%= cl_image_path vente.photo, height: 250, width: 300, crop: :fill %>')">
-      <p>Voir en détail</p>
     </div>
+
     <div class="back">
       <p><%= vente.titre %></p>
       <p><%= vente.price %></p>
