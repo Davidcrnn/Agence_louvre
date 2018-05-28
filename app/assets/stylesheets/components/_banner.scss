@@ -8,6 +8,11 @@
   align-items: center;
   justify-content: center;
 }
+.banner-slide {
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 70px);
+}
 
 .banner-content {
   display: block;
