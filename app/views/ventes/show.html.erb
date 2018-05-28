@@ -83,7 +83,10 @@
 </div>
 
             <p><%= link_to "Retour aux annonces", ventes_path, class: "retour"  %></p>
-            <p><%= link_to "Editer annonce", edit_vente_path(@vente), class: "retour" %></p>
+            <% if user_signed_in? %>
+
+            <p><%= link_to "Editer annonce", edit_vente_path(@vente), class: "edit" %></p>
+            <% end %>
     </div>
 
 <script>

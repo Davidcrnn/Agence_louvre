@@ -38,7 +38,7 @@
 <% if @vente.id %>
   <% @vente.images.each do |image| %>
     <%= image_tag image.image_url(:ventes_image) %><br>
-    <%= link_to "Delete", image_path(image), :method => :delete %><br>
+    <%= link_to "Delete", image_path(image), :method => :delete,class: "delete" %><br>
   <% end %>
 <% end %>
 
