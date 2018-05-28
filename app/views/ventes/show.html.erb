@@ -7,9 +7,11 @@
 
     <div class="rslides_container">
       <ul class="rslides" id="slider2">
-
+        <li><img src="<%= cl_image_path  @vente.photo, height: 500, width: 700, crop: :fill%>" alt=""></li>
         <li><img src="<%= cl_image_path @vente.images[0].image_url(:ventes_image)%>" alt=""></li>
+        <% if @vente.images[1].present? %>
         <li><img src="<%= cl_image_path @vente.images[1].image_url(:ventes_image)%>" alt=""></li>
+        <% end %>
         <% if @vente.images[2].present? %>
         <li><img src="<%= cl_image_path @vente.images[2].image_url(:ventes_image)%>" alt=""></li>
         <% end %>
@@ -81,6 +83,7 @@
 </div>
 
             <p><%= link_to "Retour aux annonces", ventes_path, class: "retour"  %></p>
+            <p><%= link_to "Editer annonce", edit_vente_path(@vente), class: "retour" %></p>
     </div>
 
 <script>

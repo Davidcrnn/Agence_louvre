@@ -41,8 +41,14 @@ class VentesController < ApplicationController
   end
 
   def update
+    @vente = Vente.find(params[:id])
     respond_to do |format|
       if @vente.update(vente_params)
+        if params[:images]
+          params[:images].each do |image|
+            @vente.images.create(image: image)
+          end
+        end
         format.html { redirect_to @vente, notice: 'vente was successfully updated.' }
         format.json { render :show, status: :ok, location: @vente }
       else
