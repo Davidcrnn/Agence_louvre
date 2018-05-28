@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180519101513) do
+ActiveRecord::Schema.define(version: 20180528103459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,13 +44,21 @@ ActiveRecord::Schema.define(version: 20180519101513) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "localisation"
-    t.string "string"
-    t.string "photo"
-    t.string "name"
-    t.json "images"
+    t.string "pictures"
+    t.bigint "user_id"
+    t.boolean "top", default: false, null: false
+    t.string "photos"
+    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
   create_table "mention_legales", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string "picture"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -74,7 +82,6 @@ ActiveRecord::Schema.define(version: 20180519101513) do
   end
 
   create_table "ventes", force: :cascade do |t|
-    t.string "name"
     t.string "titre"
     t.text "description"
     t.string "price"
@@ -88,5 +95,6 @@ ActiveRecord::Schema.define(version: 20180519101513) do
     t.index ["user_id"], name: "index_ventes_on_user_id"
   end
 
+  add_foreign_key "locations", "users"
   add_foreign_key "ventes", "users"
 end

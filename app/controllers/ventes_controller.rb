@@ -3,7 +3,6 @@ class VentesController < ApplicationController
   def index
     @ventes = Vente.all
     @ventes = Vente.order('created_at DESC')
-
   end
 
   def show

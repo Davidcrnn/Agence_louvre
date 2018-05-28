@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pictures/detroy'
+
   get 'images/destroy'
 
   ActiveAdmin.routes(self)
@@ -12,6 +14,7 @@ end
   resources :locations
   resources :contacts, only: [:new, :create]
   resources :images, only: [:destroy]
+  resources :pictures, only: [:destroy]
 
   get '/mentions' => 'pages#mention'
 end

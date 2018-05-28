@@ -1,13 +1,47 @@
-<h1>Index des locations</h1>
-<div class="container-card">
-  <ul> <% @locations.each do |location| %>
-    <li> <%= location.description %></li>
-    <li><%= location.surface %> </li>
-    <li> <%= location.titre %></li>
-    <li> <%= location.price %></li>
-    <%= link_to "Voir l'annonce", location_path(location), class: 'btn btn-primary'  %>
-    <%= link_to "Supprimez", vente_path(location), method: :delete, class: 'btn btn-primary'  %>
-     <% end %>
-    <%= link_to "Créer une annonce", new_location_path, class: 'btn btn-danger' %>
-  </ul>
-</div>
+<div class="container">
+
+  <% if user_signed_in? %>
+    <h1>Index des annonces de ventes</h1>
+      <%= link_to "Nouvelle annonce", new_location_path, class: 'btn btn-success' %>
+
+
+  <% end %>
+    </div>
+
+<div class="container-index">
+  <% @locations.each do |location| %>
+  <div class="row">
+    <div class=" col-xs-12">
+      <div class="card_vente">
+
+
+        <div class="content-vente">
+          <div class="photo-vente">
+            <%= cl_image_tag location.photos, height: 332, width: 400, crop: :fill %>
+          </div>
+
+          <div class="description-vente">
+            <div class="info-titre">
+            <h3><i class="fas fa-map-marker-alt"></i>   <%= location.localisation %></h3>
+            <h3><i class="fas fa-home"></i>   <%= location.titre %></h3>
+              <h3><i class="fas fa-euro-sign"></i>   Prix TTC : <%= location.price %>€</h3>
+             <h3><i class="fas fa-expand-arrows-alt"></i>   <%= location.surface %>m2</h3>
+
+            </div>
+          <div class="description">
+            <p><%= location.description %></p>
+          </div>
+        </div>
+
+          <div class="lien-vente">
+            <p><%= link_to "Voir l'annonce", location_path(location) %></p>
+            <% if user_signed_in? %>
+             <p><%= link_to "Supprimez l'annonce", location_path(location), method: :delete %></p>
+
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+      <% end %>
+  </div>

@@ -49,7 +49,29 @@
   color: black;
 
 }
-
+.delete {
+  text-decoration: underline;
+  color: black;
+  a {
+    color:black;
+  } &:hover {
+    color: black;
+    opacity: 0.5;
+  }
+}
+.edit {
+  position: fixed;
+  top: 110px;
+  left: 20px;
+  color: black;
+  text-decoration: underline;
+  a {
+    color: black;
+  } &:hover {
+    color: black;
+    opacity: 0.5;
+  }
+}
 .retour {
   position: fixed;
   top: 90px;

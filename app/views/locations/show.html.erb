@@ -1,12 +1,105 @@
-<h1>Show de l'annonce</h1>
-<ul>
-  <% @location.images.each do |r| %>
-  <%= cl_image_tag(r.url) %>
-  <% end %>
-    <li> <%= @location.description %></li>
-    <li> <%= @location.surface %></li>
-    <li> <%= @location.titre %></li>
-    <li> <%= @location.price %></li>
-</ul>
-<%= link_to "Editer", edit_location_path(@location), class: "btn btn-primary" %>
-<%= link_to "Retour aux annonces", locations_path, class: "btn btn-primary" %>
+    <div class="wrapper">
+      <div class="main-description">
+        <h1><%= @location.titre %></h1>
+      </div>
+      <% if @location.pictures.present? %>
+
+
+    <div class="rslides_container">
+      <ul class="rslides" id="slider2">
+        <li><img src="<%= cl_image_path  @location.photos, height: 500, width: 700, crop: :fill%>" alt=""></li>
+        <li><img src="<%= cl_image_path @location.pictures[0].picture_url(:locations_image)%>" alt=""></li>
+        <% if @location.pictures[1].present? %>
+        <li><img src="<%= cl_image_path @location.pictures[1].picture_url(:locations_image)%>" alt=""></li>
+        <% end %>
+        <% if @location.pictures[2].present? %>
+        <li><img src="<%= cl_image_path @location.pictures[2].picture_url(:locations_image)%>" alt=""></li>
+        <% end %>
+        <% if @location.pictures[3].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[3].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+         <% if @location.pictures[4].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[4].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+         <% if @location.pictures[5].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[5].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+         <% if @location.pictures[6].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[6].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+         <% if @location.pictures[7].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[7].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+         <% if @location.pictures[8].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[8].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+         <% if @location.pictures[9].present? %>
+         <li><img src="<%= cl_image_path @location.pictures[9].picture_url(:locations_image)%>" alt=""></li>
+         <% end %>
+      </ul>
+    </div>
+ <% end %>
+
+            <div class="description-show">
+              <div class="information-vente">
+                <ul>
+                 <li><h1><%= @location.titre %></h1> </li>
+                 <li><%= @location.localisation %></li>
+                  <li>Prix TTC: (honoraires inclus)<%= @location.price %></li> <br>
+                 <li><%= @location.description %></li> <br>
+                 <li>Surface (m2): <%= @location.surface %></li>
+                </ul>
+              <div class="contact-vente">
+                <button type="button" class="contact-vente" data-toggle="modal" data-target="#exampleModal">Faire une visite</button>
+              </div>
+            </div>
+
+
+              </div>
+
+            <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Vous souhaitez visiter ce bien</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+      <div class="modal-body">
+      <h1>Agence du Louvre</h1>
+          <p><i class="far fa-compass"></i> 52 rue de l'arbre Sec</p>
+          <p><i class="far fa-compass"></i> 75001 - Paris</p>
+          <p><i class="far fa-address-book"></i> 01-40-40-40</p>
+          <p><i class="far fa-envelope"></i> <a href="mailto:ag@gmail.com" style="color: black;">ag@gmail.com</a> </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Revenir à l'annonce</button>
+        <button type="button" class="btn btn-secondary contact-modal"> <%= link_to "Contactez nous par email", new_contact_path   %></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <p><%= link_to "Retour aux annonces", locations_path, class: "retour"  %></p>
+            <% if user_signed_in? %>
+
+            <p><%= link_to "Editer annonce", edit_location_path(@location), class: "edit" %></p>
+            <% end %>
+    </div>
+
+<script>
+
+$(function () {
+   $("#slider2").responsiveSlides({
+        auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "transparent-btns"
+      });
+
+    });
+</script>
