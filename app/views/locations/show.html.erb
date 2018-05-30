@@ -1,4 +1,6 @@
     <div class="wrapper">
+      <div class="row">
+        <div class="col-md-12">
       <div class="main-description">
         <h1><%= @location.titre %></h1>
       </div>
@@ -39,6 +41,14 @@
       </ul>
     </div>
  <% end %>
+</div>
+</div>
+<div class="container">
+
+
+    <div class="row">
+      <div class="col-md-12">
+
 
             <div class="description-show">
               <div class="information-vente">
@@ -56,7 +66,8 @@
 
 
               </div>
-
+</div>
+</div>
             <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -88,7 +99,7 @@
             <p><%= link_to "Editer annonce", edit_location_path(@location), class: "edit" %></p>
             <% end %>
     </div>
-
+</div>
 <script>
 
 $(function () {
