@@ -1,7 +1,7 @@
 
 .container-index {
   background-color: rgba(220,220,220,0.2);
-  height: calc(100vh - 70px);
+  height: 100vh;
   margin-top: 70px;
 }
 
@@ -67,7 +67,6 @@ text-overflow: ellipsis;
 .lien-vente {
   flex: 1 1 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px 20px;
@@ -81,4 +80,19 @@ text-overflow: ellipsis;
     color: White;
     background-color: rgba(0, 0, 0, 0.34);
   }
+}
+
+.nouvelle {
+  position: fixed;
+    top: 75px;
+    left: 55px;
+    color: black;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1500px) {
+  .description {
+    display: none;
+  }
+
 }

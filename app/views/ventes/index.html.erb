@@ -1,12 +1,4 @@
-<div class="container">
 
-  <% if user_signed_in? %>
-    <h1>Index des annonces de ventes</h1>
-      <%= link_to "Nouvelle annonce", new_vente_path, class: 'btn btn-success' %>
-
-
-  <% end %>
-    </div>
 
 <div class="container-index">
   <% @ventes.each do |vente| %>
@@ -17,7 +9,7 @@
 
         <div class="content-vente">
           <div class="photo-vente">
-            <%= cl_image_tag vente.photo, height: 332, width: 400, crop: :fill %>
+            <%= cl_image_tag vente.photo, height: 332, width: 500, crop: :fill %>
           </div>
 
           <div class="description-vente">
@@ -34,12 +26,15 @@
         </div>
 
           <div class="lien-vente">
-            <p><%= link_to "Voir l'annonce", vente_path(vente) %></p>
+            <p><%= link_to "Voir l'annonce", vente_path(vente) %></p><br><br>
+          </div>
+            <div class="new-vente">
             <% if user_signed_in? %>
-             <p><%= link_to "Supprimez l'annonce", vente_path(vente), method: :delete %></p>
+                <p><%= link_to "Nouvelle annonce", new_vente_path, class: "nouvelle" %></p>
 
             <% end %>
-          </div>
+
+            </div>
         </div>
       </div>
     </div>
