@@ -37,8 +37,8 @@
 
 <% if @location.id %>
   <% @location.pictures.each do |picture| %>
-    <%= image_tag picture.image_url(:locations_image) %><br>
-    <%= link_to "Delete", image_path(picture), :method => :delete,class: "delete" %><br>
+    <%= image_tag picture.picture_url(:locations_image) %><br>
+    <%= link_to "Delete", picture_path(picture), :method => :delete,class: "delete" %><br>
   <% end %>
 <% end %>
 
