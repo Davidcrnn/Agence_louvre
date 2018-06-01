@@ -1,8 +1,9 @@
  <div class="container contact-container">
   <div class="row">
   <h1>Contact</h1>
+  <h5><em>Merci de renseigner le formulaire. Nous prendrons contact avec vous dans les meilleurs délais.</em></h5>
   <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-    <%= f.input :name, :required => true %>
+    <%= f.input :nom, :required => true %>
     <%= f.input :email, :required => true %>
     <%= f.input :telephone, :required => true %>
     <%= f.input :message, :as => :text, :required => false, :input_html => {:rows => 10} %>
@@ -10,11 +11,14 @@
     <div class="hidden">
     <%= f.input :nickname %>
     </div>
-      <%= f.button :submit, 'Send message', :class=> "button" %>
+      <%= f.button :submit, 'Envoyé', :class=> "button" %>
+      <br><br>
+      <p><em>*Les informations communiquées sont destinées à l'Agence immobilière éditrice de ce site. Vous bénéficiez d'un droit d'accès, de modification, de rectification et de suppression de vos données personnelles (Loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique). Pour les exercer, adressez-vous à l'adresse de l'Editeur.</em></p>
     </div>
   <% end %>
 
   </div>
+
 </div>
 
 

@@ -16,7 +16,7 @@ class VentesController < ApplicationController
 
   def create
     @vente = Vente.create!(vente_params)
-     @vente = Vente.new(vente_params)
+     # @vente = Vente.new(vente_params)
 
   respond_to do |format|
     if @vente.save
