@@ -85,6 +85,13 @@
     opacity: 0.5;
   }
 }
+@media only screen and (max-width: 400px) {
+  .descri {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+}
 
 .main-description {
   align-items: left !important;
