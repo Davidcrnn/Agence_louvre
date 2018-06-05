@@ -5,8 +5,8 @@
 
 .contact-container {
   margin-top: 70px;
-  height: 1100px;
-  padding: 20px 20px;
+  // height: 100vh;
+  padding: 30px 30px;
 }
 
 .center-container {
@@ -16,3 +16,11 @@
 }
 
 body{width:100%;margin:auto;min-width:600px;max-width:2000px}
+
+.input-style {
+  background: none;
+  border:none;
+  box-shadow: none;
+  border-bottom: 1px solid gray;
+}
+

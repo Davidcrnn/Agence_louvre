@@ -3,15 +3,46 @@
   <h1>Estimation</h1>
   <h5><em>Merci de renseigner le formulaire. Nous prendrons contact avec vous dans les meilleurs délais.</em></h5>
   <%= simple_form_for @estimation, :html => {:class => 'form-horizontal' } do |f| %>
-    <%= f.input :nom, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :telephone, :required => true %>
-    <%= f.input :type, collection: ["Appartement", "Maison", "Loft", "Local commercial", "Parking", "Autre"]%>
-    <%= f.input :nombre_de_pieces, collection: 1..12  %>
-    <%= f.input :surface_habitable %>
-    <%= f.input :ville %>
-    <%= f.input :code_postal %>
-    <%= f.input :message, :as => :text, :required => false, :input_html => {:rows => 10} %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <%= f.input :nom, :required => true , :input_html => {:maxlength =>2,:style=> 'width: 98%', :class => 'input-style'} %>
+    </div>
+       <div class="col-xs-12 col-md-6">
+
+    <%= f.input :email, :required => true, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'} %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :ville, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'} %>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :code_postal, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'} %>
+
+    </div>
+  </div>
+  <div class="row col-xs-12 col-md-12">
+
+    <%= f.input :telephone, :required => true, :input_html => {:maxlength =>2,:style=> 'width: 99%',:class => 'input-style'} %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :type, collection: ["Appartement", "Maison", "Loft", "Local commercial", "Parking", "Autre"], :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'}%>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+    <%= f.input :nombre_de_pieces, collection: 1..12, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'}  %>
+
+    </div>
+  </div>
+   <div class="row col-xs-12 col-md-12">
+    <%= f.input :surface_habitable, :input_html => {:maxlength =>2,:style=> 'width: 99%',:class => 'input-style'} %>
+  </div>
+   <div class="row col-xs-12 col-md-12">
+
+    <%= f.input :message, :as => :text, :required => false, :input_html => {:rows => 10} ,:input_html => {:maxlength =>2,:style=> 'width: 99%',:class => 'input-style'}%>
+  </div>
     <div class="form-actions">
     <div class="hidden">
     <%= f.input :nickname %>
