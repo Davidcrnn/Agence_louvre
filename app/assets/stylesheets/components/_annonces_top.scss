@@ -89,3 +89,10 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#bcc5c7",GradientType=1);
       opacity: 0.5;
 }
+
+@media only screen and (max-width: 400px) {
+.flipcard {
+  width: 370px;
+
+}
+}

@@ -55,7 +55,7 @@ L’Agence est ouverte tous les jours de XXXX à XXXX sauf le XXX à XXXX.
   <% @ventes.each do |vente| %>
   <% if vente.top === true %>
     <div class="col-xs-12 col-md-4 photo-top-index flipcard h">
-      <div class="front description-top" style="background-image: url('<%= cl_image_path vente.photo, height: 250, width: 270, crop: :fill %>')">
+      <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path vente.photo, height: 250, width: 270, crop: :fill %>')">
     </div>
 
     <div class="back">
