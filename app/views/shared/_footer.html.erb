@@ -4,8 +4,9 @@
 </div> -->
 
 <div class="container-footer">
+  <div class="row alignement">
 
-  <div class="services-footer">
+  <div class="col-xs-12 col-md-4 services-footer">
     <h1>Nos services : </h1>
 
       <p><%= link_to "Vente", ventes_path  %></p>
@@ -15,7 +16,7 @@
 
   </div>
 
-  <div class="presentation-agence-footer">
+  <div class="col-xs-12 col-md-4 presentation-agence-footer">
     <h1>Agence du Louvre</h1>
                <p><i class="far fa-compass"></i> 52 rue de l'arbre Sec</p>
           <p><i class="far fa-compass"></i> 75001 - Paris</p>
@@ -23,7 +24,7 @@
           <p><i class="far fa-envelope"></i> <a href="mailto:ag@gmail.com">ag@gmail.com</a></p>
   </div>
 
-  <div class="link-footer">
+  <div class="col-xs-12 col-md-4 link-footer">
     <h1> Informations </h1>
       <p><%= link_to "Contact", new_contact_path  %></p>
       <p><%= link_to "Mentions légales", mentions_path  %></p>
@@ -34,10 +35,14 @@
       <% else %>
       <% end %>
   </div>
+  </div>
 </div>
 
 <div class="footer-bottom">
-  <div class="made">
+  <div class="row">
+    <div class="col-xs-12">
     <h4>©Agence du Louvre</h4>
+
+    </div>
   </div>
 </div>
