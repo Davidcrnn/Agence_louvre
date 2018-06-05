@@ -104,13 +104,13 @@ text-overflow: ellipsis;
   }
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .content-vente {
     flex-direction: column;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .lien-vente {
     flex: 0;
     margin: 0;
@@ -118,7 +118,7 @@ text-overflow: ellipsis;
     // padding: 0;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .description-vente {
     flex: 0;
     margin: 0;
@@ -126,7 +126,7 @@ text-overflow: ellipsis;
     padding: 0;
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
     .photo-vente {
     flex: 0;
     margin: 0;

@@ -9,9 +9,9 @@
 }
 
 .photo-top-index {
-  padding: 20px;
-  margin: 50px 100px;
-}
+  // padding: 20px;
+  // margin: 50px 100px;
+margin: 20px 40px;}
 
 .flipcard {
   position: relative;
@@ -90,9 +90,8 @@
       opacity: 0.5;
 }
 
-@media only screen and (max-width: 400px) {
-.flipcard {
-  width: 370px;
-
+@media only screen and (max-width: 480px) {
+.photo-top-index {
+     margin: 20px 145px;
 }
 }
