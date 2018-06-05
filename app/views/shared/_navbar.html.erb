@@ -1,28 +1,15 @@
 <div class="navbar-container">
 
-  <div class="logo-agence">
+  <div class="logo-agence hidden-xs hidden-sm">
     <h1><%= link_to "Agence du Louvre", '/'%></h1>
   </div>
 
-  <div class="link-navbar hidden-xs hidden-sm">
+  <div class="link-navbar">
     <h4><%= link_to "Accueil", '/', class: "accueil"  %></h4>
     <h4><%= link_to "Ventes", ventes_path  %></h4>
     <h4><%= link_to "Locations", locations_path  %></h4>
-    <h4><%= link_to "Estimation", new_estimation_path  %></h4>
+    <h4><%= link_to "Estimation", new_estimation_path, class:" hidden-sm hidden-xs"  %></h4>
     <h4><%= link_to "Contact", new_contact_path  %></h4>
-  </div>
-
-  <div class="link-navbar hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/ventes">Ventes</a></li>
-        <li><a href="/locations">Locations</a></li>
-        <li><a href="/estimation/new">Estimation</a></li>
-        <li><a href="/contact/new">Contact</a></li>
-      </ul>
-    </div>
   </div>
 </div>
 
