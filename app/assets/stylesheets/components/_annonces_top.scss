@@ -99,3 +99,9 @@ margin: 20px 40px;}
     flex-direction: column;
 }
 }
+
+@media only screen and (max-width: 1500px) {
+  .container-top-annonces {
+    margin: 70px;
+  }
+}
