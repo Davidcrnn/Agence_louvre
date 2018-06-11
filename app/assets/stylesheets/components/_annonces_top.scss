@@ -1,17 +1,15 @@
 .container-top-annonces {
 
 
-  text-align: center;
+
   // height: 400px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  margin: 80px;
 }
 
 .photo-top-index {
-  padding: 20px;
-  margin: 50px 100px;
-}
+  // padding: 20px;
+  // margin: 50px 100px;
+margin: 20px 40px;}
 
 .flipcard {
   position: relative;
@@ -79,7 +77,7 @@
 }
 
 .content-selection {
-  height: 100px;
+  // height: 100px;
   display: flex;
   justify-content: center;
   background: rgb(2,0,36);
@@ -88,4 +86,16 @@
   background: linear-gradient(90deg, rgba(2,0,36,0.9066001400560224) 0%, rgba(226,227,228,1) 0%, rgba(188,197,199,0.8337710084033614) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#bcc5c7",GradientType=1);
       opacity: 0.5;
+}
+.agence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center,
+}
+
+@media only screen and (max-width: 480px) {
+.agence {
+    flex-direction: column;
+}
 }

@@ -40,7 +40,7 @@ L’Agence est ouverte tous les jours de XXXX à XXXX sauf le XXX à XXXX.
          </p>
       </div>
       <div class="col-xs-12  col-md-4 agence-horaires hidden-xs hidden-sm">
-        <%= cl_image_tag("Capture_d_écran_2018-05-14_à_13.40.42.png", :effect=>"saturation:-75", :height=>250, :width=>300, :crop=>"fill") %>
+        <%= cl_image_tag("Capture_d_écran_2018-05-14_à_13.40.42.png", :effect=>"saturation:-75", :height=>250, :width=>360, :crop=>"fill") %>
       </div>
     </div>
 </div>
@@ -51,11 +51,11 @@ L’Agence est ouverte tous les jours de XXXX à XXXX sauf le XXX à XXXX.
   </div>
 
 <div class="container-top-annonces">
-  <div class="row  ">
+  <div class="row agence">
   <% @ventes.each do |vente| %>
   <% if vente.top === true %>
-    <div class="col-xs-4 photo-top-index flipcard h">
-      <div class="front description-top" style="background-image: url('<%= cl_image_path vente.photo, height: 250, width: 300, crop: :fill %>')">
+    <div class="col-xs-12 col-md-4 photo-top-index flipcard h">
+      <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path vente.photo, height: 332, width: 300, crop: :fill %>')">
     </div>
 
     <div class="back">
