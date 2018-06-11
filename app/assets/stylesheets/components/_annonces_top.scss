@@ -1,11 +1,9 @@
 .container-top-annonces {
 
 
-  text-align: center;
+
   // height: 400px;
-  display: flex;
-  justify-content: space-around;
-  // flex-wrap: wrap;
+  margin: 80px;
 }
 
 .photo-top-index {
@@ -15,7 +13,7 @@ margin: 20px 40px;}
 
 .flipcard {
   position: relative;
-  width: 270px;
+  width: 300px;
   height: 250px;
   // perspective: 500px;
 }
@@ -89,9 +87,15 @@ margin: 20px 40px;}
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#bcc5c7",GradientType=1);
       opacity: 0.5;
 }
+.agence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center,
+}
 
 @media only screen and (max-width: 480px) {
-.photo-top-index {
-     margin: 20px 145px;
+.agence {
+    flex-direction: column;
 }
 }
