@@ -5,43 +5,43 @@
   <%= simple_form_for @estimation, :html => {:class => 'form-horizontal' } do |f| %>
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <%= f.input :nom, :required => true , :input_html => {:maxlength =>2,:style=> 'width: 98%', :class => 'input-style'} %>
+      <%= f.input :nom, :required => true , :input_html => {:style=> 'width: 98%', :class => 'input-style'} %>
     </div>
        <div class="col-xs-12 col-md-6">
 
-    <%= f.input :email, :required => true, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'} %>
+    <%= f.input :email, :required => true, :input_html => {:style=> 'width: 98%',:class => 'input-style'} %>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-6">
-    <%= f.input :ville, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'} %>
+    <%= f.input :ville, :input_html => {:style=> 'width: 98%',:class => 'input-style'} %>
 
     </div>
     <div class="col-xs-12 col-md-6">
-    <%= f.input :code_postal, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'} %>
+    <%= f.input :code_postal, :input_html => {:style=> 'width: 98%',:class => 'input-style'} %>
 
     </div>
   </div>
   <div class="row col-xs-12 col-md-12">
 
-    <%= f.input :telephone, :required => true, :input_html => {:maxlength =>2,:style=> 'width: 99%',:class => 'input-style'} %>
+    <%= f.input :telephone, :required => true, :input_html => {:style=> 'width: 99%',:class => 'input-style'} %>
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-6">
-    <%= f.input :type, collection: ["Appartement", "Maison", "Loft", "Local commercial", "Parking", "Autre"], :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'}%>
+    <%= f.input :type, collection: ["Appartement", "Maison", "Loft", "Local commercial", "Parking", "Autre"], :input_html => {:style=> 'width: 98%',:class => 'input-style'}%>
 
     </div>
     <div class="col-xs-12 col-md-6">
-    <%= f.input :nombre_de_pieces, collection: 1..12, :input_html => {:maxlength =>2,:style=> 'width: 98%',:class => 'input-style'}  %>
+    <%= f.input :nombre_de_pieces, collection: 1..12, :input_html => {:style=> 'width: 98%',:class => 'input-style'}  %>
 
     </div>
   </div>
    <div class="row col-xs-12 col-md-12">
-    <%= f.input :surface_habitable, :input_html => {:maxlength =>2,:style=> 'width: 99%',:class => 'input-style'} %>
+    <%= f.input :surface_habitable, :input_html => {:style=> 'width: 99%',:class => 'input-style'} %>
   </div>
    <div class="row col-xs-12 col-md-12">
 
-    <%= f.input :message, :as => :text, :required => false, :input_html => {:rows => 10} ,:input_html => {:maxlength =>2,:style=> 'width: 99%',:class => 'input-style'}%>
+    <%= f.input :message, :as => :text, :required => false, :input_html => {:rows => 10} ,:input_html => {:style=> 'width: 99%',:class => 'input-style'}%>
   </div>
     <div class="form-actions">
     <div class="hidden">

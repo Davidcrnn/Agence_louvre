@@ -1,6 +1,6 @@
 class Estimation < MailForm::Base
   attribute :nom,      :validate => true
-  attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :email,    :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :telephone
   attribute :type, inclusion: { in: [ "Appartement", "false" ] }
   attribute :nombre_de_pieces
