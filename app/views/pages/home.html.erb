@@ -59,9 +59,9 @@ L’Agence est ouverte tous les jours de XXXX à XXXX sauf le XXX à XXXX.
     </div>
 
     <div class="back">
-      <p><%= vente.titre %></p>
-      <p><%= vente.price %></p>
-      <p><%= vente.surface %></p>
+      <p><%= vente.titre.capitalize %></p>
+      <p><%= vente.price %> €</p>
+      <p><%= vente.surface %> m²</p>
       <h3><%= link_to "Voir l'annonce", vente_path(vente)  %></h3>
     </div>
 
@@ -87,9 +87,9 @@ L’Agence est ouverte tous les jours de XXXX à XXXX sauf le XXX à XXXX.
     </div>
 
     <div class="back">
-      <p><%= location.titre %></p>
-      <p><%= location.price %></p>
-      <p><%= location.surface %></p>
+      <p><%= location.titre.capitalize %></p>
+      <p><%= location.price %> €</p>
+      <p><%= location.surface %>m²</p>
       <h3><%= link_to "Voir l'annonce", location_path(location)  %></h3>
     </div>
 
