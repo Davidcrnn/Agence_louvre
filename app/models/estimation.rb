@@ -15,7 +15,7 @@ class Estimation < MailForm::Base
   def headers
     {
       :subject => "Estimation",
-      :to => "david.crenin@gmail.com",
+      :to => "ag.dulouvre@gmail.com",
       :from => %("#{nom}" <#{email}>)
     }
   end
