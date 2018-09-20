@@ -1,6 +1,7 @@
 
 <div class="container-index">
   <% @locations.each do |location| %>
+  <% if location.visible === true %>
   <div class="row">
     <div class=" col-xs-12 border">
 
@@ -13,10 +14,10 @@
 
           <div class="description-vente">
             <div class="info-titre">
-            <h3><i class="fas fa-map-marker-alt"></i>   <%= location.localisation %></h3>
+            <h3><i class="fas fa-map-marker-alt"></i> Lieu:   <%= location.localisation %></h3>
             <h3><i class="fas fa-home"></i>   <%= location.titre %></h3>
-              <h3><i class="fas fa-euro-sign"></i>   Prix TTC : <%= location.price %>€</h3>
-             <h3><i class="fas fa-expand-arrows-alt"></i>   <%= location.surface %>m2</h3>
+              <h3><i class="fas fa-euro-sign"></i>   Loyer:  <%= location.price.to_i %>€/mois</h3>
+             <h3><i class="fas fa-expand-arrows-alt"></i>   <%= location.surface %>m²</h3>
 
             </div>
           <div class="description">
@@ -34,8 +35,9 @@
             <% end %>
 
             </div>
+
         </div>
       </div>
-
       <% end %>
   </div>
+      <% end %>

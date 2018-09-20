@@ -55,7 +55,7 @@
                 <ul>
                  <li><h1><%= @location.titre %></h1> </li>
                  <li><%= @location.localisation %></li>
-                  <li>Prix TTC: (honoraires inclus)<%= @location.price %></li> <br>
+                  <li>Loyer: <%= @location.price.to_i %>€/mois</li> <br>
                  <li><%= @location.description %></li> <br>
                  <li>Surface (m²): <%= @location.surface %></li>
                 </ul>
@@ -83,7 +83,7 @@
           <p><i class="far fa-compass"></i> 52 rue de l'Arbre Sec</p>
           <p><i class="far fa-compass"></i> Paris - 75001</p>
           <p><i class="far fa-address-book"></i> 01-40-20-90-00 / 06-07-03-61-62</p>
-          <p><i class="far fa-envelope"></i> <a href="mailto:ag@gmail.com" style="color: black;">ag.dulouvre@gmail.com</a> </p>
+          <p><i class="far fa-envelope"></i> <a href="mailto:ag.dulouvre@gmail.com" style="color: black;">ag.dulouvre@gmail.com</a> </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Revenir à l'annonce</button>

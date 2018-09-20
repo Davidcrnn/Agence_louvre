@@ -65,6 +65,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:titre, :description, :photos, :surface, :top, :price, :localisation, pictures_attributes: [:picture, :location_id])
+    params.require(:location).permit(:titre, :description, :photos, :surface, :top, :visisble, :price, :localisation, pictures_attributes: [:picture, :location_id])
   end
 end
