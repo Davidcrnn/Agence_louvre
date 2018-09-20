@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180920065709) do
+ActiveRecord::Schema.define(version: 20180920103846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,21 +34,6 @@ ActiveRecord::Schema.define(version: 20180920065709) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "vente_id"
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string "titre"
-    t.text "description"
-    t.string "price"
-    t.string "surface"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "localisation"
-    t.string "pictures"
-    t.bigint "user_id"
-    t.boolean "top", default: false, null: false
-    t.string "photos"
-    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
   create_table "mention_legales", force: :cascade do |t|
@@ -81,21 +66,4 @@ ActiveRecord::Schema.define(version: 20180920065709) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "ventes", force: :cascade do |t|
-    t.string "titre"
-    t.text "description"
-    t.string "price"
-    t.string "surface"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "localisation"
-    t.string "photo"
-    t.bigint "user_id"
-    t.boolean "top", default: false, null: false
-    t.boolean "visible"
-    t.index ["user_id"], name: "index_ventes_on_user_id"
-  end
-
-  add_foreign_key "locations", "users"
-  add_foreign_key "ventes", "users"
 end
