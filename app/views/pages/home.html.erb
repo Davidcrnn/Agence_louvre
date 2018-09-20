@@ -53,7 +53,7 @@ L’Agence est ouverte tous les jours de 9h à 20h sans interruption sauf le dim
 <div class="container-top-annonces">
   <div class="agence">
   <% @ventes.each do |vente| %>
-  <% if vente.top === true && vente.visible === true %>
+  <% if vente.top === true %>
     <div class="photo-top-index flipcard h">
       <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path vente.photo, height: 332, width: 300, crop: :fill %>')">
     </div>
@@ -81,7 +81,7 @@ L’Agence est ouverte tous les jours de 9h à 20h sans interruption sauf le dim
 <div class="container-top-annonces">
   <div class="agence">
   <% @locations.each do |location| %>
-  <% if location.top === true and location.visible === true %>
+  <% if location.top === true%>
     <div class="photo-top-index flipcard h">
       <div class="front description-top responsive-top" style="background-image: url('<%= cl_image_path location.photos, height: 332, width: 300, crop: :fill %>')">
     </div>
