@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20180920084740) do
     t.bigint "user_id"
     t.boolean "top", default: false, null: false
     t.string "photos"
+    t.boolean "visisble", default: false, null: false
     t.boolean "visible", default: false, null: false
     t.index ["user_id"], name: "index_locations_on_user_id"
   end
