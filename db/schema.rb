@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180920084740) do
+ActiveRecord::Schema.define(version: 20180920072951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,8 @@ ActiveRecord::Schema.define(version: 20180920084740) do
     t.bigint "user_id"
     t.boolean "top", default: false, null: false
     t.string "photos"
-    t.boolean "visible", default: false, null: false
+    t.boolean "visible", default: true
+    t.boolean "visisble", default: false, null: false
     t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
@@ -93,7 +94,7 @@ ActiveRecord::Schema.define(version: 20180920084740) do
     t.string "photo"
     t.bigint "user_id"
     t.boolean "top", default: false, null: false
-    t.boolean "visible", default: false, null: false
+    t.boolean "visible", default: true
     t.index ["user_id"], name: "index_ventes_on_user_id"
   end
 
