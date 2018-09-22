@@ -1,11 +1,11 @@
 class PictureUploader < CarrierWave::Uploader::Base
  include Cloudinary::CarrierWave
-version :locations_image do
-    process :resize_to_fill => [700, 500]
+version :rentals_image do
+    process :resize_to_fill => [600, 400]
   end
 
-version :locations_show do
-    process :resize_to_fill => [700, 500]
+version :rentals_show do
+    process :resize_to_fill => [600, 400]
   end
 
   def extension_white_list
