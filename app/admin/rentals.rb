@@ -1,8 +1,8 @@
-ActiveAdmin.register Location do
+ActiveAdmin.register Rental do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :name, :titre, :description, :localisation, :surface, :price, :photo, :user_id, :imagess
+permit_params :name, :titre, :description, :localisation, :surface, :price, :photo, :user_id, :imagess, :visible
 #
 # or
 #

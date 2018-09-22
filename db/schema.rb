@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180530140856) do
+ActiveRecord::Schema.define(version: 20180921102640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,22 +33,7 @@ ActiveRecord::Schema.define(version: 20180530140856) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "vente_id"
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string "titre"
-    t.text "description"
-    t.string "price"
-    t.string "surface"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "localisation"
-    t.string "pictures"
-    t.bigint "user_id"
-    t.boolean "top", default: false, null: false
-    t.string "photos"
-    t.index ["user_id"], name: "index_locations_on_user_id"
+    t.integer "sale_id"
   end
 
   create_table "mention_legales", force: :cascade do |t|
@@ -58,9 +43,40 @@ ActiveRecord::Schema.define(version: 20180530140856) do
 
   create_table "pictures", force: :cascade do |t|
     t.string "picture"
-    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rentals", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titre"
+    t.string "surface"
+    t.string "price"
+    t.text "description"
+    t.string "localisation"
+    t.string "pictures"
+    t.boolean "top", default: false, null: false
+    t.string "photos"
+    t.boolean "visible", default: false, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_rentals_on_user_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titre"
+    t.string "surface"
+    t.string "price"
+    t.text "description"
+    t.string "localisation"
+    t.string "photo"
+    t.boolean "top", default: false, null: false
+    t.string "photos"
+    t.boolean "visible", default: false, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_sales_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,20 +97,6 @@ ActiveRecord::Schema.define(version: 20180530140856) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "ventes", force: :cascade do |t|
-    t.string "titre"
-    t.text "description"
-    t.string "price"
-    t.string "surface"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "localisation"
-    t.string "photo"
-    t.bigint "user_id"
-    t.boolean "top", default: false, null: false
-    t.index ["user_id"], name: "index_ventes_on_user_id"
-  end
-
-  add_foreign_key "locations", "users"
-  add_foreign_key "ventes", "users"
+  add_foreign_key "rentals", "users"
+  add_foreign_key "sales", "users"
 end

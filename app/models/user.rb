@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :ventes, dependent: :destroy
+  has_many :rentals, dependent: :destroy
 
   def name
     "#{id} - #{email}"

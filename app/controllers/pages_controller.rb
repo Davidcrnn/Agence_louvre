@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
   def home
-    @ventes = Vente.all
-    @locations = Location.all
+    @sales = Sale.all
+    @rentals = Rental.all
   end
 
   def mention
-    @ventes =Vente.all
+    @sales =Sale.all
   end
 end
