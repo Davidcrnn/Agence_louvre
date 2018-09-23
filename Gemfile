@@ -14,6 +14,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'taps', '~> 0.3.24'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
